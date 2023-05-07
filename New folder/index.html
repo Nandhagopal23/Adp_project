@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+</html>
+    <section>
+        <form>
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="forget">
+                <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
+            </div>
+            <button class="login-btn" onclick="auth()">LOGIN</button>
+            <div class="register">
+                <p>Don't have a account <a href="#">Register</a></p>
+            </div>
+            <script>
+                function auth(){
+                    var email = document.getElementById("email").value;
+                    var password =document.getElementById("password").value;
+                    if(email=="cit@gmail.com"  && password =="nandha"){
+                        window.location.assign("mainindex.html");
+                        alert("Login successfully");
+                    }
+                    else{
+                        alert("Inavalid Information");
+                        return;
+                    }
+                }
+            </script>
+        </form>
+    </section>
+</body>
